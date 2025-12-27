@@ -1,0 +1,417 @@
+@font-face {
+    font-family: bold;
+    src: url("/AeonikTRIAL-Bold.otf");
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: bold;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background-color: #f47a7a;
+
+    #content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        #profile {
+            height: 250px;
+            width: 90%;
+            background-color: #FFCDC9;
+            border-radius: 20px;
+            box-shadow: 0px 0px 100px 0px #FFCDC9;
+            background-image: url("https://images.unsplash.com/photo-1605158080227-fd61e78bdc8b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
+            background-position: bottom;
+            transition: all ease 0.5s;
+            position: relative;
+            #date{
+                color: white;
+                font-size: 50px;
+                padding:20px
+            }
+
+            #time {
+                font-size: 50px;
+                color: white;
+                font-weight: 100;
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all ease 0.5s;
+            }
+
+            #place {
+                font-size: 50px;
+                color: white;
+                font-weight: 100;
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                transition: all ease 0.5s;
+            }
+
+            h3 {
+                color: transparent;
+                font-size: 50px;
+                transition: all ease 0.5s;
+                position: absolute;
+                top: 40%;
+                right:3%;
+            }
+        }
+
+        #profile:hover {
+            height: 300px;
+            width: 95%;
+
+            #time {
+                top: 50%;
+                left: 3%;
+                transform: translate(0,0);
+                transition: all ease 0.5s;
+            }
+
+            #place {
+                top: 66%;
+                left: 3%;
+                transform: translate(0,0);
+                transition: all ease 0.5s;
+            }
+            h3{
+                color: white;
+            }
+        }
+
+        #allElems {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 50px;
+
+            .elem {
+                margin-top: 60px;
+                height: 300px;
+                width: 260px;
+                border-radius: 20px;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                h1 {
+                    position: absolute;
+                    bottom: 2%;
+                    right: 2%;
+                    white-space: nowrap;
+                    color: rgb(255, 255, 255);
+                }
+            }
+        }
+
+    }
+
+    .allElem {
+        height: 100%;
+        width: 100%;
+        background-color: #FFCDC9;
+        position: absolute;
+        top: 0%;
+        display: none;
+
+        .close {
+            margin-top: 20px;
+            position: absolute;
+            background-color: transparent;
+            color: crimson;
+            top: 20px;
+            right: 30px;
+            font-size: 20px;
+            padding: 7px 17px;
+            border: 3px solid crimson;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+#TODO {
+    h1 {
+        margin: 20px;
+        font-size: 70px;
+        font-weight: 100;
+    }
+
+    #main {
+        height: 75%;
+        width: 80%;
+        margin: auto;
+        border-radius: 20px;
+
+        #left {
+            height: 100%;
+            width: 40%;
+            float: left;
+
+            form {
+                height: 100%;
+                width: 100%;
+                background-color: #f47a7a;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+
+                input {
+                    height: 45px;
+                    width: 80%;
+                    border-radius: 10px;
+                    border: none;
+                    padding: 15px;
+                    font-size: 25px;
+                    outline: none;
+                    background-color: #FEEAC9;
+                }
+
+                textarea {
+                    border-radius: 10px;
+                    border: none;
+                    padding: 12px;
+                    font-size: 25px;
+                    width: 80%;
+                    height: 300px;
+                    resize: none;
+                    outline: none;
+                    background-color: #FEEAC9;
+                }
+
+                button {
+                    height: 50px;
+                    width: 40%;
+                    border-radius: 15px;
+                    border: none;
+                    background-color: crimson;
+                    color: white;
+                    font-size: 25px;
+                    cursor: pointer;
+                    transition: all ease 0.3s;
+                }
+            }
+        }
+
+        #right {
+            height: 100%;
+            width: 57.5%;
+            background-color: #f47a7a;
+            border-radius: 20px;
+            float: right;
+            overflow: auto;
+
+            .task {
+                background-color: #FEEAC9;
+                margin: 20px;
+                padding: 15px;
+                border-radius: 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h2 {
+                    font-size: 25px;
+                }
+
+                button {
+                    padding: 15px 15px;
+                    color: #FEEAC9;
+                    background-color: green;
+                    border: none;
+                    transition: all ease 0.3s;
+                    font-size: 15px;
+                    border-radius: 15px;
+                }
+            }
+        }
+
+    }
+}
+
+#Daily_Planner {
+    h1 {
+        margin: 20px;
+        font-size: 50px;
+        font-weight: 100;
+    }
+
+    #main2 {
+        height: 75%;
+        width: 85%;
+        margin: auto;
+        border-radius: 20px;
+        background-color: #f47a7a;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: auto;
+
+        div {
+            width: 48%;
+            height: 40px;
+            background-color: #FEEAC9;
+            margin: 10px;
+            border-radius: 10px;
+            display: flex;
+            position: relative;
+
+            h3 {
+                margin-left: 10px;
+                align-self: center;
+                font-size: 12px;
+                position: absolute;
+                top: 6%;
+                left: 0.5%;
+            }
+
+            input {
+                height: 100%;
+                width: 100%;
+                border: none;
+                background-color: transparent;
+                outline: none;
+                font-size: 22px;
+                padding: 25px;
+                padding-top: 25px;
+            }
+        }
+    }
+}
+
+#Motivation {
+    h1 {
+        margin: 20px;
+        font-size: 60px;
+        font-weight: 100;
+    }
+
+    #motivebox {
+        width: 70%;
+        margin: auto;
+        margin-top: 40px;
+        border-radius: 20px;
+        background-image: url("https://images.unsplash.com/photo-1604618504394-bf572163ec23?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-size: cover;
+        background-position: center;
+        padding: 50px;
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        border: black 5px solid;
+
+        p {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 40px;
+
+            i {
+                font-size: 50px;
+                font-weight: 100;
+            }
+        }
+
+        h3 {
+            font-size: 40px;
+            font-weight: 100;
+        }
+
+        color: white;
+        text-align: center;
+    }
+}
+
+
+
+
+#Pomodoro_Timer {
+    // display: block;
+
+    h1 {
+        margin: 20px;
+        font-size: 60px;
+        font-weight: 600;
+        position: absolute;
+    }
+
+    #pomodoro {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        #time {
+            font-size: 160px;
+            font-weight: 500;
+        }
+
+        #controls {
+            button {
+                margin: 0px 20px;
+                border-radius: 10px;
+                border: 3px solid black;
+                background-color: #F47A7A;
+                color: black;
+                font-size: 25px;
+                padding: 8px 30px;
+                cursor: pointer;
+                transition: all ease 0.3s;
+            }
+        }
+    }
+}
+
+button:active {
+    scale: 90%;
+}
+
+.elem:hover {
+    scale: 106%;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.463);
+}
+
+.elem:active {
+    scale: 30%;
+}

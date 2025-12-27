@@ -1,0 +1,363 @@
+@font-face {
+  font-family: bold;
+  src: url("/AeonikTRIAL-Bold.otf");
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: bold;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: #f47a7a;
+}
+main #content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main #content #profile {
+  height: 250px;
+  width: 90%;
+  background-color: #FFCDC9;
+  border-radius: 20px;
+  box-shadow: 0px 0px 100px 0px #FFCDC9;
+  background-image: url("https://images.unsplash.com/photo-1605158080227-fd61e78bdc8b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: bottom;
+  transition: all ease 0.5s;
+  position: relative;
+}
+main #content #profile #date {
+  color: white;
+  font-size: 50px;
+  padding: 20px;
+}
+main #content #profile #time {
+  font-size: 50px;
+  color: white;
+  font-weight: 100;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all ease 0.5s;
+}
+main #content #profile #place {
+  font-size: 50px;
+  color: white;
+  font-weight: 100;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  transition: all ease 0.5s;
+}
+main #content #profile h3 {
+  color: transparent;
+  font-size: 50px;
+  transition: all ease 0.5s;
+  position: absolute;
+  top: 40%;
+  right: 3%;
+}
+main #content #profile:hover {
+  height: 300px;
+  width: 95%;
+}
+main #content #profile:hover #time {
+  top: 50%;
+  left: 3%;
+  transform: translate(0, 0);
+  transition: all ease 0.5s;
+}
+main #content #profile:hover #place {
+  top: 66%;
+  left: 3%;
+  transform: translate(0, 0);
+  transition: all ease 0.5s;
+}
+main #content #profile:hover h3 {
+  color: white;
+}
+main #content #allElems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+}
+main #content #allElems .elem {
+  margin-top: 60px;
+  height: 300px;
+  width: 260px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+main #content #allElems .elem img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #content #allElems .elem h1 {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  white-space: nowrap;
+  color: rgb(255, 255, 255);
+}
+main .allElem {
+  height: 100%;
+  width: 100%;
+  background-color: #FFCDC9;
+  position: absolute;
+  top: 0%;
+  display: none;
+}
+main .allElem .close {
+  margin-top: 20px;
+  position: absolute;
+  background-color: transparent;
+  color: crimson;
+  top: 20px;
+  right: 30px;
+  font-size: 20px;
+  padding: 7px 17px;
+  border: 3px solid crimson;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#TODO h1 {
+  margin: 20px;
+  font-size: 70px;
+  font-weight: 100;
+}
+#TODO #main {
+  height: 75%;
+  width: 80%;
+  margin: auto;
+  border-radius: 20px;
+}
+#TODO #main #left {
+  height: 100%;
+  width: 40%;
+  float: left;
+}
+#TODO #main #left form {
+  height: 100%;
+  width: 100%;
+  background-color: #f47a7a;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+#TODO #main #left form input {
+  height: 45px;
+  width: 80%;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  font-size: 25px;
+  outline: none;
+  background-color: #FEEAC9;
+}
+#TODO #main #left form textarea {
+  border-radius: 10px;
+  border: none;
+  padding: 12px;
+  font-size: 25px;
+  width: 80%;
+  height: 300px;
+  resize: none;
+  outline: none;
+  background-color: #FEEAC9;
+}
+#TODO #main #left form button {
+  height: 50px;
+  width: 40%;
+  border-radius: 15px;
+  border: none;
+  background-color: crimson;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+#TODO #main #right {
+  height: 100%;
+  width: 57.5%;
+  background-color: #f47a7a;
+  border-radius: 20px;
+  float: right;
+  overflow: auto;
+}
+#TODO #main #right .task {
+  background-color: #FEEAC9;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#TODO #main #right .task h2 {
+  font-size: 25px;
+}
+#TODO #main #right .task button {
+  padding: 15px 15px;
+  color: #FEEAC9;
+  background-color: green;
+  border: none;
+  transition: all ease 0.3s;
+  font-size: 15px;
+  border-radius: 15px;
+}
+
+#Daily_Planner h1 {
+  margin: 20px;
+  font-size: 50px;
+  font-weight: 100;
+}
+#Daily_Planner #main2 {
+  height: 75%;
+  width: 85%;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #f47a7a;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: auto;
+}
+#Daily_Planner #main2 div {
+  width: 48%;
+  height: 40px;
+  background-color: #FEEAC9;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  position: relative;
+}
+#Daily_Planner #main2 div h3 {
+  margin-left: 10px;
+  align-self: center;
+  font-size: 12px;
+  position: absolute;
+  top: 6%;
+  left: 0.5%;
+}
+#Daily_Planner #main2 div input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 22px;
+  padding: 25px;
+  padding-top: 25px;
+}
+
+#Motivation h1 {
+  margin: 20px;
+  font-size: 60px;
+  font-weight: 100;
+}
+#Motivation #motivebox {
+  width: 70%;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 20px;
+  background-image: url("https://images.unsplash.com/photo-1604618504394-bf572163ec23?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border: black 5px solid;
+  color: white;
+  text-align: center;
+}
+#Motivation #motivebox p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 40px;
+}
+#Motivation #motivebox p i {
+  font-size: 50px;
+  font-weight: 100;
+}
+#Motivation #motivebox h3 {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+#Pomodoro_Timer h1 {
+  margin: 20px;
+  font-size: 60px;
+  font-weight: 600;
+  position: absolute;
+}
+#Pomodoro_Timer #pomodoro {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#Pomodoro_Timer #pomodoro #time {
+  font-size: 160px;
+  font-weight: 500;
+}
+#Pomodoro_Timer #pomodoro #controls button {
+  margin: 0px 20px;
+  border-radius: 10px;
+  border: 3px solid black;
+  background-color: #F47A7A;
+  color: black;
+  font-size: 25px;
+  padding: 8px 30px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+button:active {
+  scale: 90%;
+}
+
+.elem:hover {
+  scale: 106%;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.463);
+}
+
+.elem:active {
+  scale: 30%;
+}/*# sourceMappingURL=style.css.map */
